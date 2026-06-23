@@ -49,9 +49,19 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-stone-500 text-sm font-light">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-stone-500 text-sm font-light text-center md:text-right">
           <p>&copy; {new Date().getFullYear()} معلم حداد كريتال بجدة. جميع الحقوق محفوظة.</p>
-          <p>صُنع بدقة واحترافية عالية</p>
+          <p>
+            تم التصميم والتطوير بواسطة{' '}
+            <a 
+              href="https://nasharhub.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-amber-500 hover:text-amber-400 font-medium transition-colors hover:underline"
+            >
+              NasharHub.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
