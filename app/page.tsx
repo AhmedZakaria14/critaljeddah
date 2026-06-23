@@ -32,12 +32,12 @@ export default function Home() {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-stone-900 leading-[1.15] mb-8">
-                صناعة <span className="text-transparent bg-clip-text bg-gradient-to-l from-amber-500 to-amber-700">المعادن</span><br />
-                <span className="text-stone-500 font-medium text-4xl lg:text-5xl mt-4 block">برؤية فنية و دقة هندسية</span>
+                أفضل <span className="text-transparent bg-clip-text bg-gradient-to-l from-amber-500 to-amber-700">حداد بجدة</span><br />
+                <span className="text-stone-500 font-medium text-4xl lg:text-5xl mt-4 block">لأعمال الكريتال والحدادة</span>
               </h1>
               
               <p className="text-lg md:text-xl text-stone-600 mb-12 leading-relaxed max-w-2xl">
-                نقدم لك أرقى تصاميم الحدادة والكريتال. أبواب، شبابيك، ودرابزين تجمع بين المتانة المطلقة واللمسة الجمالية الفاخرة التي تليق بمنزلك.
+                معلم حداد بجدة لتفصيل وتركيب كافة أعمال الحدادة والكريتال. أبواب، شبابيك، مظلات، وسواتر بأعلى معايير الجودة وأفضل الأسعار لخدمتكم.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5">
