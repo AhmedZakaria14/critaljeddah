@@ -4,8 +4,8 @@ import { Award, Target, Users, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'من نحن',
-  description: 'تعرف على حداد كريتال جدة، رواد صناعة الحدادة والكريتال في المملكة. نقدم خبرات تمتد لسنوات في تفصيل الأبواب والشبابيك والمظلات بأعلى معايير الجودة والتصميم.',
+  title: 'أفضل حداد في جدة | من نحن',
+  description: 'تعرف على أفضل حداد بجدة، ورشة حدادة متخصصة في أعمال الكريتال وتفصيل الأبواب والشبابيك والمظلات بأعلى معايير الجودة والتصميم.',
 };
 
 const logoUrl = "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782240782/%D8%AD%D8%AF%D8%A7%D8%AF_%D9%83%D8%B1%D9%8A%D8%AA%D8%A7%D9%84_%D8%AC%D8%AF%D8%A9_ua2idm.png";

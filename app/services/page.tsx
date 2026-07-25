@@ -5,8 +5,8 @@ import { ArrowLeft } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'خدماتنا',
-  description: 'تشكيلة واسعة من خدمات الحدادة والكريتال في جدة: أبواب ليزر وقص، شبابيك، مظلات سيارات، برجولات، درابزين حديد، وهناجر ومستودعات.',
+  title: 'خدمات حدادة متكاملة في جدة',
+  description: 'أفضل معلم حداد في جدة يقدم خدمات الحدادة والكريتال: تفصيل أبواب ليزر، شبابيك، مظلات سيارات، برجولات، درابزين حديد، وهناجر بأفضل الأسعار.',
 };
 
 const services = [

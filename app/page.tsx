@@ -1,7 +1,13 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Award, Ruler, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
+
+export const metadata: Metadata = {
+  title: 'حداد بجدة | معلم حداد كريتال وتفصيل ابواب وشبابيك',
+  description: 'أفضل حداد بجدة لأعمال الكريتال والحدادة. تفصيل أبواب حديد، شبابيك، مظلات، سواتر، درابزين، وبرجولات بجدة. أسعار منافسة وجودة عالية.',
+};
 
 const images = [
   "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_5_pumwsb.jpg",
@@ -93,8 +99,8 @@ export default function Home() {
       <section className="py-24 bg-stone-50 border-y border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-stone-900 mb-4">لماذا تختار حداد كريتال جدة؟</h2>
-            <p className="text-stone-500 text-lg">نلتزم بتقديم أفضل المعايير في كل مشروع نقوم بتنفيذه.</p>
+            <h2 className="text-3xl font-bold text-stone-900 mb-4">لماذا تختار أفضل حداد في جدة؟</h2>
+            <p className="text-stone-500 text-lg">بصفتنا ورشة حدادة رائدة بجدة، نلتزم بتقديم أفضل المعايير في كل مشروع نقوم بتنفيذه.</p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1} className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-100 hover:border-amber-200 group">
@@ -102,7 +108,7 @@ export default function Home() {
                 <Shield size={32} className="text-amber-600" />
               </div>
               <h3 className="text-2xl font-bold text-stone-900 mb-4">متانة تدوم طويلاً</h3>
-              <p className="text-stone-600 leading-relaxed">نستخدم أفضل أنواع الحديد وأحدث تقنيات اللحام والدهانات المقاومة للصدأ لضمان عمر افتراضي طويل لأعمالنا.</p>
+              <p className="text-stone-600 leading-relaxed">نستخدم أفضل أنواع الحديد وأحدث تقنيات اللحام والدهانات المقاومة للصدأ لضمان عمر افتراضي طويل لأعمال الحدادة والكريتال.</p>
             </ScrollReveal>
             
             <ScrollReveal delay={0.2} className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-100 hover:border-amber-200 group">

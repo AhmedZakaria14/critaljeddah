@@ -3,8 +3,8 @@ import { MapPin, Phone, MessageCircle, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'تواصل معنا',
-  description: 'تواصل مع أفضل ورشة حدادة وكريتال في جدة. اتصل الآن أو أرسل رسالة عبر الواتساب للاستفسارات وطلب تفصيل الأبواب والشبابيك والمظلات والسواتر بأفضل الأسعار.',
+  title: 'تواصل معنا | رقم حداد بجدة',
+  description: 'هل تبحث عن رقم حداد بجدة؟ تواصل معنا الآن للحصول على أفضل خدمات الحدادة والكريتال. اتصل الآن أو راسلنا عبر الواتساب لتفصيل الأبواب والشبابيك بأفضل الأسعار.',
 };
 
 const phoneNumber = "0545334871";
