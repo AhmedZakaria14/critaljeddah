@@ -10,10 +10,9 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_5_pumwsb.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_4_vu6nlo.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239616/WhatsApp_Image_2026-06-23_at_7.09.59_AM_3_juz0ky.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239616/WhatsApp_Image_2026-06-23_at_7.09.59_AM_2_k7funx.jpg"
+  "/media/workers-installation.jpeg",
+  "/media/wood-look-metal-gate.jpeg",
+  "/media/carport-and-window-grille.jpeg",
 ];
 
 export default function Home() {

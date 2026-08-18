@@ -11,7 +11,7 @@ const tajawal = Tajawal({
   variable: '--font-tajawal',
 });
 
-const logoUrl = "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782240782/%D8%AD%D8%AF%D8%A7%D8%AF_%D9%83%D8%B1%D9%8A%D8%AA%D8%A7%D9%84_%D8%AC%D8%AF%D8%A9_ua2idm.png";
+const logoUrl = "/media/logo.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://haddad-jeddah.com'),
