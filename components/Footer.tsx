@@ -29,6 +29,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-amber-400 transition-colors">من نحن</Link></li>
               <li><Link href="/services" className="hover:text-amber-400 transition-colors">خدماتنا المتميزة</Link></li>
               <li><Link href="/gallery" className="hover:text-amber-400 transition-colors">معرض الأعمال</Link></li>
+              <li><Link href="/blog" className="hover:text-amber-400 transition-colors">مدونة الحدادة</Link></li>
             </ul>
           </div>
           
