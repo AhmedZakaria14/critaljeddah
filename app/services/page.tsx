@@ -13,32 +13,32 @@ const services = [
   {
     title: "أبواب ليزر وقص",
     desc: "تصاميم عصرية وتقنيات قص دقيقة بالليزر تضفي لمسة من الفخامة والحداثة على واجهة منزلك.",
-    img: "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_5_pumwsb.jpg"
+    img: "/media/geometric-metal-gate.jpeg"
   },
   {
     title: "أبواب كريتال خارجية",
     desc: "أبواب رئيسية قوية ومتينة بتصاميم كلاسيكية أو حديثة، مع ضمان الأمان والمظهر الجمالي.",
-    img: "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239616/WhatsApp_Image_2026-06-23_at_7.09.59_AM_1_w0mbqt.jpg"
+    img: "/media/wood-look-metal-gate.jpeg"
   },
   {
     title: "شبابيك حديد وحماية",
     desc: "تصاميم حماية أنيقة للنوافذ لا تحجب الرؤية أو الضوء، وتوفر الأمان التام لعائلتك.",
-    img: "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239618/WhatsApp_Image_2026-06-23_at_7.09.58_AM_4_iylo11.jpg"
+    img: "/media/carport-and-window-grille.jpeg"
   },
   {
     title: "درابزين سلالم وبلكونات",
     desc: "تفصيل درابزين حديد بأشكال هندسية مبتكرة للسلالم الداخلية والخارجية والشرفات.",
-    img: "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239627/WhatsApp_Image_2026-06-23_at_7.09.57_AM_jznpct.jpg"
+    img: "/media/staircase-and-glass-room.jpeg"
   },
   {
     title: "مظلات وسواتر",
     desc: "تركيب مظلات للسيارات والحدائق، وسواتر جدارية للخصوصية بتصاميم متينة ومقاومة للعوامل الجوية.",
-    img: "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239623/WhatsApp_Image_2026-06-23_at_7.09.57_AM_2_s9pkrs.jpg"
+    img: "/media/carport-and-pergola.jpeg"
   },
   {
     title: "أعمال حدادة مخصصة",
     desc: "تفصيل أي أفكار أو تصاميم خاصة يطلبها العميل من أثاث معدني، ديكورات جدارية، أو هياكل حديدية.",
-    img: "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239627/WhatsApp_Image_2026-06-23_at_7.09.58_AM_exu7rb.jpg"
+    img: "/media/workers-installation.jpeg"
   }
 ];
 

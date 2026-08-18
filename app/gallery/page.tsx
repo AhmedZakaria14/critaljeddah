@@ -8,25 +8,31 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_5_pumwsb.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_4_vu6nlo.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239616/WhatsApp_Image_2026-06-23_at_7.09.59_AM_3_juz0ky.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239616/WhatsApp_Image_2026-06-23_at_7.09.59_AM_2_k7funx.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239616/WhatsApp_Image_2026-06-23_at_7.09.59_AM_1_w0mbqt.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239617/WhatsApp_Image_2026-06-23_at_7.09.59_AM_ebmko4.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239618/WhatsApp_Image_2026-06-23_at_7.09.58_AM_4_iylo11.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239618/WhatsApp_Image_2026-06-23_at_7.10.00_AM_xgp0e6.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239623/WhatsApp_Image_2026-06-23_at_7.09.58_AM_1_chfzm5.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239623/WhatsApp_Image_2026-06-23_at_7.09.57_AM_2_s9pkrs.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239623/WhatsApp_Image_2026-06-23_at_7.09.58_AM_2_m61zpr.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239624/WhatsApp_Image_2026-06-23_at_7.09.57_AM_1_p4cath.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239627/WhatsApp_Image_2026-06-23_at_7.09.57_AM_jznpct.jpg",
-  "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239627/WhatsApp_Image_2026-06-23_at_7.09.58_AM_exu7rb.jpg"
+  "/media/workers-installation.jpeg",
+  "/media/steel-stock.jpeg",
+  "/media/roof-frame.jpeg",
+  "/media/painted-steel-profile.jpeg",
+  "/media/wood-look-metal-gate.jpeg",
+  "/media/roof-tile-sample.jpeg",
+  "/media/metal-shop-materials.jpeg",
+  "/media/red-metal-door.jpeg",
+  "/media/staircase-and-glass-room.jpeg",
+  "/media/carport-and-pergola.jpeg",
+  "/media/geometric-metal-gate.jpeg",
+  "/media/floating-steel-staircase.jpeg",
+  "/media/carport-and-window-grille.jpeg",
+  "/media/roof-installation.jpeg",
 ];
 
 const videos = [
-  "https://res.cloudinary.com/dxvjqrb9l/video/upload/v1782239621/WhatsApp_Video_2026-06-23_at_7.09.58_AM_r6ngot.mp4",
-  "https://res.cloudinary.com/dxvjqrb9l/video/upload/v1782239628/WhatsApp_Video_2026-06-23_at_7.09.58_AM_1_ahzq2n.mp4"
+  {
+    src: "/media/wood-look-metal-door.mp4",
+    poster: "/media/wood-look-metal-gate.jpeg",
+  },
+  {
+    src: "/media/arched-wood-look-metal-door.mp4",
+    poster: "/media/red-metal-door.jpeg",
+  },
 ];
 
 export default function GalleryPage() {
@@ -54,9 +60,9 @@ export default function GalleryPage() {
                 <video 
                   controls 
                   className="w-full h-full object-cover"
-                  poster={images[index + 5]}
+                  poster={video.poster}
                 >
-                  <source src={video} type="video/mp4" />
+                  <source src={video.src} type="video/mp4" />
                 </video>
               </ScrollReveal>
             ))}

@@ -86,7 +86,7 @@ export default function ContactPage() {
           
           {/* Quick Contact Form Placeholder / Call to Action Map */}
           <ScrollReveal delay={0.3} className="bg-stone-900 rounded-3xl p-10 text-white relative overflow-hidden flex flex-col justify-center text-center shadow-2xl h-full">
-             <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dxvjqrb9l/image/upload/v1782239615/WhatsApp_Image_2026-06-23_at_7.09.59_AM_5_pumwsb.jpg')] bg-cover bg-center opacity-10"></div>
+             <div className="absolute inset-0 bg-[url('/media/workers-installation.jpeg')] bg-cover bg-center opacity-10"></div>
              <div className="relative z-10">
                <h3 className="text-3xl font-bold mb-6">هل لديك مشروع قادم؟</h3>
                <p className="text-stone-400 text-lg mb-10 leading-relaxed">
