@@ -7,6 +7,7 @@ import { blogPosts } from '@/lib/blog';
 export const metadata: Metadata = {
   title: 'مدونة الحدادة والكريتال في جدة',
   description: 'دليل شامل لأعمال الحدادة في جدة: أبواب الحديد والكريتال والشبابيك والدرابزين وورش التصنيع والتفصيل والتركيب والصيانة.',
+  twitter: { card: 'summary_large_image', title: 'مدونة الحدادة والكريتال في جدة', description: 'دليل أعمال الحدادة والتفصيل والتركيب والصيانة في جدة.', images: [blogPosts[0].image] },
   keywords: ['مدونة حداد جدة', 'أعمال الحدادة بجدة', 'أبواب حديد جدة', 'حداد كريتال', 'ورش حدادة جدة'],
   alternates: { canonical: '/blog' },
   openGraph: {
@@ -24,18 +25,18 @@ export default function BlogPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'مدونة الحدادة والكريتال في جدة',
-    url: 'https://haddad-jeddah.com/blog',
+    url: 'https://www.haddad-jeddah.com/blog',
     inLanguage: 'ar-SA',
     hasPart: blogPosts.map((post) => ({
       '@type': 'BlogPosting',
       headline: post.title,
-      url: `https://haddad-jeddah.com/blog/${post.slug}`,
-      image: `https://haddad-jeddah.com${post.image}`,
+      url: `https://www.haddad-jeddah.com/blog/${post.slug}`,
+      image: `https://www.haddad-jeddah.com${post.image}`,
     })),
   };
 
   return (
-    <main className="min-h-screen bg-stone-50 pb-24">
+    <div className="min-h-screen bg-stone-50 pb-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema).replace(/</g, '\\u003c') }} />
 
       <header className="border-b border-stone-200 bg-white py-20 text-center">
@@ -79,6 +80,6 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

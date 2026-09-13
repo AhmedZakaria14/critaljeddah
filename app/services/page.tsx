@@ -1,13 +1,11 @@
+import { pageMetadata } from '@/lib/seo';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = {
-  title: 'خدمات حدادة متكاملة في جدة',
-  description: 'أفضل معلم حداد في جدة يقدم خدمات الحدادة والكريتال: تفصيل أبواب ليزر، شبابيك، مظلات سيارات، برجولات، درابزين حديد، وهناجر بأفضل الأسعار.',
-};
+export const metadata: Metadata = pageMetadata("خدمات حدادة متكاملة في جدة", "أفضل معلم حداد في جدة يقدم خدمات الحدادة والكريتال: تفصيل أبواب ليزر، شبابيك، مظلات سيارات، برجولات، درابزين حديد، وهناجر بأفضل الأسعار.", '/services');
 
 const services = [
   {
@@ -59,11 +57,11 @@ export default function ServicesPage() {
             <ScrollReveal delay={0.1 * (i % 3)} key={i}>
               <div className="h-full bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-200 hover:shadow-xl hover:border-amber-200 transition-all duration-300 group">
                 <div className="aspect-[4/3] relative overflow-hidden bg-stone-100">
-                  <Image 
-                    src={service.img} 
-                    alt={service.title} 
-                    fill 
-                    className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                  <Image sizes="(max-width: 768px) 100vw, 50vw"
+                    src={service.img}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -80,7 +78,7 @@ export default function ServicesPage() {
           ))}
         </div>
       </div>
-      
+
       {/* Process CTA */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="bg-stone-900 rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl">

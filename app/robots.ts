@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://haddad-jeddah.com/sitemap.xml', // Change this to the actual domain
+    sitemap: 'https://www.haddad-jeddah.com/sitemap.xml',
   };
 }

@@ -1,12 +1,10 @@
+import { pageMetadata } from '@/lib/seo';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Award, Target, Users, Clock } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata: Metadata = {
-  title: 'أفضل حداد في جدة | من نحن',
-  description: 'تعرف على أفضل حداد بجدة، ورشة حدادة متخصصة في أعمال الكريتال وتفصيل الأبواب والشبابيك والمظلات بأعلى معايير الجودة والتصميم.',
-};
+export const metadata: Metadata = pageMetadata("أفضل حداد في جدة | من نحن", "تعرف على أفضل حداد بجدة، ورشة حدادة متخصصة في أعمال الكريتال وتفصيل الأبواب والشبابيك والمظلات بأعلى معايير الجودة والتصميم.", '/about');
 
 const logoUrl = "/media/logo.png";
 
@@ -32,7 +30,7 @@ export default function AboutPage() {
             <p className="text-stone-600 text-lg leading-relaxed mb-8">
               نفخر بفريق عملنا المكون من أمهر الحدادين والفنيين الذين يمتلكون خبرة واسعة ولمسة فنية تمكنهم من تحويل الحديد الصامت إلى تحف فنية تنبض بالحياة وتضفي جمالاً ورونقاً خاصاً على منازل عملائنا ومنشآتهم.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-stone-50 p-6 rounded-2xl border border-stone-100 shadow-sm">
                 <div className="text-3xl font-black text-amber-600 mb-2">+15</div>
@@ -46,24 +44,24 @@ export default function AboutPage() {
               </div>
             </div>
           </ScrollReveal>
-          
+
           <ScrollReveal delay={0.3} className="relative">
             <div className="aspect-square bg-stone-100 rounded-[3rem] p-12 flex items-center justify-center border border-stone-200 shadow-inner">
                <div className="relative w-full h-full drop-shadow-2xl">
-                 <Image src={logoUrl} alt="شعار المؤسسة" fill className="object-contain" referrerPolicy="no-referrer" />
+                 <Image sizes="(max-width: 768px) 100vw, 50vw" src={logoUrl} alt="شعار المؤسسة" fill className="object-contain" referrerPolicy="no-referrer" />
                </div>
             </div>
           </ScrollReveal>
         </div>
       </div>
-      
+
       {/* Core Values */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl font-bold text-stone-900 mb-4">قيمنا ومبادئنا</h2>
           <p className="text-stone-500 text-lg">الأسس التي نبني عليها نجاحنا وثقة عملائنا</p>
         </ScrollReveal>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { icon: Award, title: "الجودة الفائقة", desc: "نستخدم أفضل خامات الحديد والدهانات العالمية" },

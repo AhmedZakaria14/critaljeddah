@@ -53,31 +53,32 @@ export default async function BlogArticlePage({ params }: PageProps) {
   const post = getBlogPost(slug);
   if (!post) notFound();
 
-  const pageUrl = `https://haddad-jeddah.com/blog/${post.slug}`;
+  const pageUrl = `https://www.haddad-jeddah.com/blog/${post.slug}`;
   const faqItems = getFaqItems(post);
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
-    image: [`https://haddad-jeddah.com${post.image}`],
+    image: [`https://www.haddad-jeddah.com${post.image}`],
     datePublished: post.publishedAt,
     dateModified: post.modifiedAt,
     inLanguage: 'ar-SA',
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
-    author: { '@type': 'Organization', name: 'حداد كريتال بجدة', url: 'https://haddad-jeddah.com' },
+    author: { '@type': 'Organization', name: 'حداد كريتال بجدة', url: 'https://www.haddad-jeddah.com' },
     publisher: {
       '@type': 'Organization',
       name: 'حداد كريتال بجدة',
-      logo: { '@type': 'ImageObject', url: 'https://haddad-jeddah.com/media/logo.png' },
+      logo: { '@type': 'ImageObject', url: 'https://www.haddad-jeddah.com/media/logo.png' },
     },
   };
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${pageUrl}#breadcrumb`,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://haddad-jeddah.com' },
-      { '@type': 'ListItem', position: 2, name: 'المدونة', item: 'https://haddad-jeddah.com/blog' },
+      { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.haddad-jeddah.com' },
+      { '@type': 'ListItem', position: 2, name: 'المدونة', item: 'https://www.haddad-jeddah.com/blog' },
       { '@type': 'ListItem', position: 3, name: post.title, item: pageUrl },
     ],
   };
@@ -94,7 +95,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
     : null;
 
   return (
-    <main className="min-h-screen bg-stone-50 pb-24">
+    <div className="min-h-screen bg-stone-50 pb-24">
       {[articleSchema, breadcrumbSchema, faqSchema].filter(Boolean).map((schema, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
       ))}
@@ -156,6 +157,6 @@ export default async function BlogArticlePage({ params }: PageProps) {
           </aside>
         </div>
       </article>
-    </main>
+    </div>
   );
 }

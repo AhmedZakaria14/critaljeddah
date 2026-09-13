@@ -7,3 +7,12 @@
 html {
   scroll-behavior: smooth;
 }
+/* Keep Arabic text and grid/flex children within narrow screens. */
+body { overflow-wrap: anywhere; }
+.grid > *, .flex > * { min-width: 0; }
+img, video { max-width: 100%; }
+section[id], article [id] { scroll-margin-top: 7rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

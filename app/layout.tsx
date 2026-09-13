@@ -1,3 +1,5 @@
+import Script from 'next/script';
+import { localBusiness } from '@/lib/localBusiness';
 import type {Metadata} from 'next';
 import { Tajawal } from 'next/font/google';
 import './globals.css';
@@ -14,7 +16,7 @@ const tajawal = Tajawal({
 const logoUrl = "/media/logo.png";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://haddad-jeddah.com'),
+  metadataBase: new URL('https://www.haddad-jeddah.com'),
   title: {
     template: '%s | حداد كريتال بجدة',
     default: 'حداد كريتال بجدة | أبواب، شبابيك، مظلات، سواتر وأعمال حدادة',
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    url: 'https://haddad-jeddah.com',
+    url: 'https://www.haddad-jeddah.com',
     title: 'حداد كريتال بجدة | أبواب وشبابيك وأعمال حدادة متكاملة',
     description: 'أفضل معلم حداد كريتال في جدة. تنفيذ وتفصيل كافة أعمال الحدادة: أبواب كريتال، شبابيك، مظلات، سواتر، درابزين، وبرجولات بأعلى جودة وأفضل الأسعار.',
     siteName: 'حداد كريتال بجدة',
@@ -110,8 +112,17 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="ar" dir="rtl" className={tajawal.variable}>
       <body className="font-sans antialiased text-stone-800 bg-stone-50" suppressHydrationWarning>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-EHHHFFF86H" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EHHHFFF86H');
+        `}</Script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness).replace(/</g, '\\u003c') }} />
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:right-2 focus:z-[100] focus:bg-white focus:p-4">انتقل إلى المحتوى</a>
         <Navbar />
-        <main className="min-h-screen pt-24">
+        <main id="main-content" className="min-h-screen pt-24">
           {children}
         </main>
         <Footer />
