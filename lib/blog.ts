@@ -1,9 +1,11 @@
 import posts from '@/data/blog-posts.json';
 
 export type BlogBlock =
-  | { type: 'paragraph'; text: string }
-  | { type: 'listItem'; title: string; text: string }
+  | { type: 'paragraph'; text: string; parts?: BlogTextPart[] }
+  | { type: 'listItem'; title: string; text: string; parts?: BlogTextPart[] }
   | { type: 'subheading'; text: string };
+
+export type BlogTextPart = { text: string; href?: string };
 
 export type BlogSection = {
   heading: string;
@@ -33,7 +35,14 @@ export function getBlogPost(slug: string) {
 }
 
 export function getRelatedPosts(currentSlug: string) {
-  return blogPosts.filter((post) => post.slug !== currentSlug);
+  const current = getBlogPost(currentSlug);
+  return blogPosts
+    .filter((post) => post.slug !== currentSlug)
+    .sort((a, b) => {
+      const relevance = (post: BlogPost) => post.keywords.filter((keyword) => current?.keywords.includes(keyword)).length;
+      return relevance(b) - relevance(a);
+    })
+    .slice(0, 4);
 }
 
 export function createSectionId(heading: string, index: number) {

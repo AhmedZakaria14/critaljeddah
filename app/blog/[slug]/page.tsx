@@ -117,7 +117,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 <h1 className="mb-6 text-4xl font-extrabold leading-tight text-stone-900 md:text-5xl">{post.title}</h1>
                 <p className="mb-7 text-lg leading-8 text-stone-600">{post.description}</p>
                 <div className="flex flex-wrap items-center gap-5 text-sm text-stone-500">
-                  <span className="flex items-center gap-2"><CalendarDays size={18} className="text-amber-600" /> 18 أغسطس 2026</span>
+                  <span className="flex items-center gap-2"><CalendarDays size={18} className="text-amber-600" /> {new Intl.DateTimeFormat('ar-SA-u-ca-gregory', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Riyadh' }).format(new Date(`${post.publishedAt}T12:00:00Z`))}</span>
                   <span className="flex items-center gap-2"><Clock3 size={18} className="text-amber-600" /> {post.readingTime} دقائق قراءة</span>
                 </div>
               </div>

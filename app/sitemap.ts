@@ -3,6 +3,10 @@ import { blogPosts } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.haddad-jeddah.com';
+  const latestArticleUpdate = blogPosts.reduce(
+    (latest, post) => post.modifiedAt > latest ? post.modifiedAt : latest,
+    '2026-08-18',
+  );
   
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -37,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-08-18'),
+      lastModified: new Date(latestArticleUpdate),
       changeFrequency: 'weekly',
       priority: 0.9,
     },

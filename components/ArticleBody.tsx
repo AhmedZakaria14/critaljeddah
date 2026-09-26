@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpLeft, CheckCircle2 } from 'lucide-react';
-import { BlogBlock, BlogPost, BlogSection, createSectionId, getRelatedPosts } from '@/lib/blog';
+import { BlogBlock, BlogPost, BlogSection, BlogTextPart, createSectionId, getRelatedPosts } from '@/lib/blog';
 
 const linkRules = [
   { phrases: ['خدمات حداد جدة', 'حداد جدة'], slug: 'خدمات-حداد-جدة-للمنازل-والمنشآت' },
@@ -40,6 +40,14 @@ function renderLinkedText(text: string, currentSlug: string, linkedSlugs: Set<st
   );
 }
 
+function renderText(text: string, parts: BlogTextPart[] | undefined, currentSlug: string, linkedSlugs: Set<string>) {
+  if (!parts) return renderLinkedText(text, currentSlug, linkedSlugs);
+  return parts.map((part, index) => {
+    if (!part.href || part.href === `/blog/${currentSlug}`) return <span key={index}>{part.text}</span>;
+    return <Link key={index} href={part.href} className="font-bold text-amber-700 underline decoration-amber-300 underline-offset-4 transition-colors hover:text-amber-900">{part.text}</Link>;
+  });
+}
+
 function renderBlocks(blocks: BlogBlock[], currentSlug: string, linkedSlugs: Set<string>) {
   const output: React.ReactNode[] = [];
   let index = 0;
@@ -62,7 +70,7 @@ function renderBlocks(blocks: BlogBlock[], currentSlug: string, linkedSlugs: Set
                 </span>
                 <div>
                   {item.title && <h3 className="mb-2 text-xl font-bold text-stone-900">{item.title}</h3>}
-                  <p className="text-lg leading-9 text-stone-700">{renderLinkedText(item.text, currentSlug, linkedSlugs)}</p>
+                  <p className="text-lg leading-9 text-stone-700">{renderText(item.text, item.parts, currentSlug, linkedSlugs)}</p>
                 </div>
               </div>
             </li>
@@ -81,7 +89,7 @@ function renderBlocks(blocks: BlogBlock[], currentSlug: string, linkedSlugs: Set
     } else {
       output.push(
         <p key={`paragraph-${index}`} className="mb-5 text-lg leading-9 text-stone-700">
-          {renderLinkedText(block.text, currentSlug, linkedSlugs)}
+          {renderText(block.text, block.parts, currentSlug, linkedSlugs)}
         </p>,
       );
     }
